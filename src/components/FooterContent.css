@@ -1,0 +1,55 @@
+.f-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    background: #6372ff;
+    color: black;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    min-width: 180px;
+    max-width: 300px;
+    width: 100%;
+    display: inline-block;
+  }
+  
+  .f-btn:hover {
+    background: #6372ff;
+    color: white;
+  }
+  
+  @media (max-width: 1200px) {
+    .f-btn {
+      font-size: 17px;
+      padding: 14px 28px;
+      min-width: 160px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .f-btn {
+      font-size: 16px;
+      padding: 12px 25px;
+      min-width: 150px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .f-btn {
+      font-size: 15px;
+      padding: 12px 20px;
+      min-width: 140px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .f-btn {
+      font-size: 14px;
+      padding: 10px 15px;
+      min-width: 120px;
+      max-width: 100%;
+    }
+  }
+  

@@ -1,0 +1,129 @@
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 15px;
+    background: url("/img/p-img.jpg") no-repeat center center/cover;
+}
+
+.profile-card {
+    width: 100%;
+    max-width: 450px;
+    max-height: 520px;
+    padding: 25px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    position: relative;
+}
+
+.profile-text,
+.profile-name,
+.profile-overall-score,
+.pt {
+    color: white !important;
+    font-weight: bold;
+}
+
+.profile-avatar {
+    background-color: #1890ff;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.profile-name {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.profile-details {
+    text-align: left;
+    font-size: 16px;
+}
+
+.profile-text {
+    display: block;
+    color: #595959;
+    font-size: 15px;
+    margin-top: 4px;
+}
+
+.profile-overall-score {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #1890ff;
+}
+
+.settings-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s;
+}
+
+.settings-icon:hover {
+    color: #1890ff;
+}
+
+.modal-input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #d9d9d9;
+}
+
+@media screen and (max-width: 768px) {
+    .profile-card {
+        padding: 20px;
+    }
+
+    .profile-name {
+        font-size: 20px;
+    }
+
+    .profile-text,
+    .profile-overall-score {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .profile-card {
+        padding: 15px;
+    }
+
+    .profile-name {
+        font-size: 18px;
+    }
+
+    .profile-text,
+    .profile-overall-score {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .profile-card {
+        padding: 2px;
+    }
+    .profile-card h3{
+        font-size: 20px;
+    }
+    .profile-name {
+        font-size: 10px;
+    }
+
+    .profile-text,
+    .profile-overall-score {
+        font-size: 9.4px;
+    }
+}

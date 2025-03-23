@@ -1,0 +1,98 @@
+.quizapp-container {
+  max-width: 800px;
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.quizapp-category-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.quizapp-category-selection h2 {
+  font-size: 22px;
+  color: #333;
+}
+
+.quizapp-button {
+  width: 100%;
+  max-width: 250px;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  background: #6372ff;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.quizapp-button:hover {
+  background: #6372ff;
+  color: white;
+
+}
+
+@media (max-width: 1500px) {
+  .quizapp-container {
+      width: 50%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .quizapp-container {
+      width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .quizapp-container {
+      width: 80%;
+      padding: 15px;
+  }
+  .quizapp-button {
+      max-width: 220px;
+      padding: 12px;
+      font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quizapp-container {
+      width: 95%;
+      padding: 10px;
+  }
+  .quizapp-category-selection h2 {
+      font-size: 18px;
+  }
+  .quizapp-button {
+      max-width: 200px;
+      font-size: 14px;
+      padding: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .quizapp-container {
+      width: 100%;
+      padding: 8px;
+  }
+  .quizapp-button {
+      max-width: 180px;
+      font-size: 13px;
+      padding: 8px;
+  }
+}

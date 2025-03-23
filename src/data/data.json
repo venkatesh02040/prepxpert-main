@@ -1,0 +1,111 @@
+{
+  "Header": {
+    "title": "PREPXPERT-Your Ultimate Placement Partner",
+    "paragraph": "PrepXpert is your ultimate placement preparation platform, offering structured tests, real-world challenges, and seamless evaluation. Get job-ready with expertly crafted assessments tailored to your career goals."
+  },
+  "About": {
+    "paragraph": "PrepXpert is a dedicated platform designed to help job seekers enhance their skills and excel in placement tests. We provide structured assessments that cover communication, aptitude, and technical skills, ensuring candidates are well-prepared for industry requirements. Our goal is to bridge the gap between learning and career success through practical, job-oriented evaluations.",
+    "Why": [
+      "Comprehensive Assessments – Covering essential skills required for placements.",
+      "Instant Feedback – Get real-time results to track and improve performance.",
+      "Role-Specific Tests – Tailored assessments based on job roles and industries.",
+      "Easy-to-Use Platform – A seamless experience for effective test-taking.",
+      "Performance Analytics – Track progress with detailed reports and insights."
+    ]
+  },
+  "Services": [
+    {
+      "icon": "fa fa-wordpress",
+      "name": "Role-Based Placement Tests",
+      "text": "Structured assessments designed to evaluate Communication, Aptitude, and Technical skills based on specific job roles."
+    },
+    {
+      "icon": "fa fa-cart-arrow-down",
+      "name": "Detailed Performance Reports",
+      "text": "Get in-depth insights into your test performance, highlighting strengths and areas that need improvement."
+    },
+    {
+      "icon": "fa fa-cloud-download",
+      "name": "Skill Enhancement Resources",
+      "text": "Access carefully curated study materials, mock tests, and practice exercises to sharpen your skills."
+    },
+    {
+      "icon": "fa fa-language",
+      "name": "Industry-Relevant Skill Assessment",
+      "text": "Test modules designed to align with current industry standards, ensuring job readiness."
+    },
+    {
+      "icon": "fa fa-plane",
+      "name": "Certification & Recognition",
+      "text": "Earn certifications that validate your skills and enhance your profile for better career opportunities."
+    },
+    {
+      "icon": "fa fa-pie-chart",
+      "name": "Seamless & Adaptive Test Experience",
+      "text": "A real-world test environment with an intuitive interface for smooth and effective assessments."
+    }
+  ],
+  "Testimonials": [
+    {
+      "img": "img/testimonials/01.jpg",
+      "text": "\"PrepXpert made my placement journey smooth! The structured tests and real-time feedback helped me identify my weak areas and improve efficiently.\"",
+      "name": "Amit R., Software Engineer"
+    },
+    {
+      "img": "img/testimonials/02.jpg",
+      "text": "\"A must-have platform for placement preparation! The structured mock tests and insights into performance helped me crack multiple job interviews.\"",
+      "name": "Shiva G., Business Analyst"
+    },
+    {
+      "img": "img/testimonials/03.jpg",
+      "text": "\"PrepXpert’s personalized approach to test preparation is outstanding. It guided me step by step, making learning effective and stress-free.\"",
+      "name": "Rahul K., Web Developer"
+    },
+    {
+      "img": "img/testimonials/04.jpg",
+      "text": "\"The combination of aptitude, technical, and communication tests is exactly what I needed to get job-ready. Highly recommended!\"",
+      "name": "Priya M., UI/UX Designer"
+    },
+    {
+      "img": "img/testimonials/05.jpg",
+      "text": "\"I struggled with interview preparation until I found PrepXpert. Their tests and detailed analysis helped me land my first job!\"",
+      "name": "Varun T., Cloud Engineer"
+    },
+    {
+      "img": "img/testimonials/06.jpg",
+      "text": "\"I loved the real-world test simulations. The platform gave me the confidence to crack my technical and aptitude rounds with ease!\"",
+      "name": "Neha S., Data Analyst"
+    }
+  ],
+  "Contact": {
+    "address": "Hyderbad , Telangana - 500009 ",
+    "phone": "+91 9876543210",
+    "email": "prepxpert@company.com",
+    "facebook": "facebook.com",
+    "instagram": "instagram.com",
+    "twitter": "twitter.com",
+    "linkedin.com": "linkedin.com"
+  },
+  "Features": [
+    {
+      "icon": "fa fa-comments-o",
+      "title": "Recruiter-Trusted Methodology",
+      "text": "Designed with insights from hiring professionals to meet industry expectations."
+    },
+    {
+      "icon": "fa fa-bullhorn",
+      "title": "Comprehensive Evaluation",
+      "text": "Beyond test scores, we analyze performance trends to help you improve."
+    },
+    {
+      "icon": "fa fa-group",
+      "title": "Confidence Boosting Approach",
+      "text": "Engage in real-world problem-solving to enhance logical thinking and decision-making."
+    },
+    {
+      "icon": "fa fa-magic",
+      "title": "Career-Ready Preparation",
+      "text": "Beyond assessments, we help you develop a strategic approach to job applications and interviews."
+    }
+  ]
+}

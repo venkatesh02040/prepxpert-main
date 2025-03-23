@@ -1,0 +1,39 @@
+{
+    "communication": [
+      { "question": "What is the synonym of 'Happy'?", "options": ["Sad", "Angry", "Joyful"], "answer": "Joyful" },
+      { "question": "What is the opposite of 'Fast'?", "options": ["Quick", "Slow", "Run"], "answer": "Slow" },
+      { "question": "Which word means the same as 'Large'?", "options": ["Big", "Tiny", "Narrow"], "answer": "Big" },
+      { "question": "What does 'Honest' mean?", "options": ["Liar", "Trustworthy", "Cunning"], "answer": "Trustworthy" },
+      { "question": "What is a synonym of 'Strong'?", "options": ["Weak", "Powerful", "Timid"], "answer": "Powerful" },
+      { "question": "Choose the synonym for 'Begin'?", "options": ["Start", "End", "Finish"], "answer": "Start" },
+      { "question": "Which word is similar to 'Brave'?", "options": ["Coward", "Fearless", "Timid"], "answer": "Fearless" },
+      { "question": "What is the antonym of 'Cold'?", "options": ["Hot", "Warm", "Cool"], "answer": "Hot" },
+      { "question": "Which word means 'Unhappy'?", "options": ["Glad", "Miserable", "Cheerful"], "answer": "Miserable" },
+      { "question": "What does 'Genuine' mean?", "options": ["Fake", "Real", "Imitation"], "answer": "Real" }
+    ],
+    "aptitude": [
+      { "question": "5 + 3 = ?", "options": ["6", "8", "10"], "answer": "8" },
+      { "question": "12 / 4 = ?", "options": ["2", "3", "4"], "answer": "3" },
+      { "question": "Square root of 25?", "options": ["5", "6", "7"], "answer": "5" },
+      { "question": "10 * 2 = ?", "options": ["10", "20", "30"], "answer": "20" },
+      { "question": "15 - 7 = ?", "options": ["5", "8", "10"], "answer": "8" },
+      { "question": "What is 7 × 6?", "options": ["42", "36", "48"], "answer": "42" },
+      { "question": "If a triangle has angles 60°, 60°, and __?", "options": ["30°", "60°", "90°"], "answer": "60°" },
+      { "question": "A dozen has how many items?", "options": ["6", "10", "12"], "answer": "12" },
+      { "question": "What is the next number in the sequence: 2, 4, 8, 16, __?", "options": ["20", "24", "32"], "answer": "32" },
+      { "question": "If 5 apples cost $10, what is the cost of 1 apple?", "options": ["$1", "$2", "$3"], "answer": "$2" }
+    ],
+    "technical": [
+      { "question": "What does HTML stand for?", "options": ["HyperText Markup Language", "HyperTransfer Markup Language", "HighText Machine Learning"], "answer": "HyperText Markup Language" },
+      { "question": "Which language is used for React?", "options": ["Python", "JavaScript", "C++"], "answer": "JavaScript" },
+      { "question": "CSS stands for?", "options": ["Cascading Style Sheets", "Creative Style System", "Code Style Syntax"], "answer": "Cascading Style Sheets" },
+      { "question": "What is 'var' in JavaScript?", "options": ["Variable", "Function", "Constant"], "answer": "Variable" },
+      { "question": "React uses which architecture?", "options": ["MVC", "Component-Based", "Monolithic"], "answer": "Component-Based" },
+      { "question": "Which tag is used to link an external CSS file?", "options": ["<style>", "<css>", "<link>"], "answer": "<link>" },
+      { "question": "What is the purpose of 'useState' in React?", "options": ["To manage component state", "To create a new component", "To fetch API data"], "answer": "To manage component state" },
+      { "question": "Which JavaScript function is used to fetch an API?", "options": ["fetch()", "getAPI()", "loadData()"], "answer": "fetch()" },
+      { "question": "What does '===' do in JavaScript?", "options": ["Checks value only", "Checks both value and type", "Assigns a value"], "answer": "Checks both value and type" },
+      { "question": "What is the file extension for a React component?", "options": [".js", ".jsx", ".react"], "answer": ".jsx" }
+    ]
+  }
+  

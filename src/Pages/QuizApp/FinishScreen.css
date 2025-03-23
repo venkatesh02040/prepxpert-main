@@ -1,0 +1,97 @@
+.finish-container {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  background: #fff;
+}
+
+.score-section p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.score-section .overall-score {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px !important;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background: #007bff;
+}
+
+.restart-btn {
+  background: #28a745;
+}
+
+.restart-btn:hover {
+  background: #218838;
+}
+
+.dashboard-btn {
+  background: #dc3545;
+}
+
+.dashboard-btn:hover {
+  background: #c82333;
+}
+
+.btn-icon {
+  margin-right: 8px;
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+
+@media (max-width: 768px) {
+  .finish-container {
+      max-width: 90%;
+      padding: 15px;
+  }
+
+  .score-section p {
+      font-size: 16px;
+  }
+
+  .btn-group {
+      flex-direction: column;
+  }
+
+  .btn {
+      width: 100%;
+      margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .finish-container h2 {
+      font-size: 20px;
+  }
+
+  .score-section p {
+      font-size: 14px;
+  }
+
+  .btn {
+      font-size: 14px;
+      padding: 8px;
+  }
+}

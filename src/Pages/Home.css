@@ -1,0 +1,133 @@
+.home-container {
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  padding: 1.2rem;
+  background-color: #f8f9fa;
+}
+
+.banner {
+  width: 100%;
+  height: 400px;
+  background: url("/img/coding-img.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  position: relative;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  color: #fff;
+}
+
+.banner-content h2{
+  color: #fff !important;
+}
+
+.welcome-message {
+  margin-top: 1.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.start-assessment-btn {
+  background-color: #6372ff;
+  color: #333;
+  font-weight: bolder;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+  border-radius: 8px;
+  transition: background 0.3s ease-in-out;
+}
+
+.start-assessment-btn:hover {
+  background-color: #6372ff;
+  color: #fff;
+}
+
+@media (min-width: 1500px) {
+  .banner {
+    height: 500px;
+  }
+  .banner-content {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 1499px) {
+  .banner {
+    height: 450px;
+  }
+  .banner-content {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 1199px) {
+  .banner {
+    height: 350px;
+  }
+  .banner-content {
+    font-size: 1.5rem;
+  }
+  .welcome-message {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .banner {
+    height: 300px;
+  }
+  .banner-content {
+    font-size: 1.4rem;
+    padding: 1rem;
+  }
+  .start-assessment-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 599px) {
+  .banner {
+    height: 250px;
+  }
+ 
+  .banner-content p{
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  .banner-content h2{
+    font-size: 1.6rem;
+    padding: 0.8rem;
+  }
+
+
+  .welcome-message {
+    font-size: 1.5rem;
+  }
+  .start-assessment-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
