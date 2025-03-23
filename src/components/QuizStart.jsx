@@ -6,7 +6,6 @@ import FooterContent from './FooterContent';
 const QuizStart = ({ dispatch, questions, totalQuestions, index, answer, timeLeft, totalTimeLeft }) => {
     const isTimeUp = timeLeft <= 0;
 
-    // State to hold user ID and scores from localStorage
     const [userId, setUserId] = useState(null);
     const [userScores, setUserScores] = useState({
         communication_score: 0,
@@ -30,17 +29,15 @@ const QuizStart = ({ dispatch, questions, totalQuestions, index, answer, timeLef
         }
     }, []);
 
-    // Reset hasAnswered when a new question appears
     useEffect(() => {
         setHasAnswered(false);
     }, [index]);
 
-    // Prevent user from leaving the page
     useEffect(() => {
         const handleBeforeUnload = (event) => {
             event.preventDefault();
             event.returnValue = "Are you sure you want to leave the quiz? Your progress will be lost.";
-            window.location.href = "/dashboard"; // Redirect to dashboard on refresh
+            window.location.href = "/dashboard"; 
         };
     
         window.addEventListener("beforeunload", handleBeforeUnload);
@@ -50,12 +47,11 @@ const QuizStart = ({ dispatch, questions, totalQuestions, index, answer, timeLef
         };
     }, []);
 
-    // Block browser navigation (back/forward)
     useEffect(() => {
         const handlePopState = () => {
             window.history.pushState(null, "", window.location.href);
             message.warning("You cannot navigate away during the quiz!", 2);
-            window.location.href = "/dashboard"; // Redirect to dashboard on back navigation
+            window.location.href = "/dashboard"; 
         };
     
         window.history.pushState(null, "", window.location.href);
@@ -81,23 +77,17 @@ const QuizStart = ({ dispatch, questions, totalQuestions, index, answer, timeLef
                 return;
             }
 
-            // ✅ Correct API URL (match backend route structure)
             const apiUrl = `https://prep-backend.onrender.com/api/users/${storedUser.id}/score`;
 
-            // ✅ Log request details for debugging
-            console.log("Request payload:", updatedScores);
-
-            // ✅ Make the PUT request
             const response = await fetch(apiUrl, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
-                    "Authorization": `Bearer ${localStorage.getItem("token")}`, // Ensure token is valid
+                    "Authorization": `Bearer ${localStorage.getItem("token")}`, 
                 },
                 body: JSON.stringify(updatedScores),
             });
 
-            // ✅ Handle response
             const result = await response.json();
             if (!response.ok) {
                 throw new Error(`Failed to update score. Status: ${response.status}, Message: ${result.message}`);
@@ -127,7 +117,6 @@ const QuizStart = ({ dispatch, questions, totalQuestions, index, answer, timeLef
     
             updatedScores.overall_score = updatedScores.communication_score + updatedScores.aptitude_score + updatedScores.technical_score;
     
-            // ✅ Update local storage immediately
             const storedUser = JSON.parse(localStorage.getItem("user")) || {};
             storedUser.communication_score = updatedScores.communication_score;
             storedUser.aptitude_score = updatedScores.aptitude_score;
@@ -136,10 +125,8 @@ const QuizStart = ({ dispatch, questions, totalQuestions, index, answer, timeLef
     
             localStorage.setItem("user", JSON.stringify(storedUser));
     
-            // ✅ Update state
             setUserScores(updatedScores);
     
-            // ✅ Send update request to backend
             updateScore(updatedScores);
         }
     };
