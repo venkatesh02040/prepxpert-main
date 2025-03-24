@@ -38,7 +38,7 @@ export const Features = (props) => {
         </div>
         <br />
         <button onClick={handleNavigate} className="btn btn-custom btn-lg page-scroll">
-          Start Your Journey
+         Take Your Test Now
         </button>
       </div>
     </div>

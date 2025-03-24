@@ -96,19 +96,27 @@ const StartYourJourney = () => {
   const onGuestLogin = async () => {
     try {
       setGuestLoading(true);
-
+  
       const response = await fetch(LOGIN_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: "guest@gmail.com", password: "123456" }),
       });
-
+  
       const data = await response.json();
-
+  
       if (response.ok) {
         localStorage.setItem("user", JSON.stringify(data.user));
         localStorage.setItem("token", data.token);
-
+  
+        await fetch("https://prep-backend.onrender.com/api/users/guest/reset-scores", {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${data.token}`,
+          },
+        });
+  
         showNotification("success", "Logged in as Guest", "You are logged in as a guest.");
         navigate("/dashboard");
       } else {
@@ -120,6 +128,7 @@ const StartYourJourney = () => {
       setGuestLoading(false);
     }
   };
+  
 
   return (
     <div className="start-your-journey">

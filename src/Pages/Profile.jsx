@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Card, Typography, Row, Col, Avatar, Dropdown, Menu, Modal, Input, message, Button } from "antd";
 import { UserOutlined, SettingOutlined, ExclamationCircleOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
-import "./Profile.css"; // Import external CSS for styling
-
+import "./Profile.css"; 
 const { Title, Text } = Typography;
 const { confirm } = Modal;
 
@@ -19,20 +18,22 @@ const Profile = () => {
     if (storedUser) {
       setUser(JSON.parse(storedUser));
     } else {
-      navigate("/"); // Redirect to login if no user data
+      navigate("/"); 
     }
   }, [navigate]);
 
   if (!user) return null;
 
-  // Handle Edit Click (Open Modal)
   const handleEditClick = () => {
-    setEditedUser({ name: user.name, email: user.email, password: "" }); // Pre-fill user details without exposing password
+    setEditedUser({ name: user.name, email: user.email, password: "" }); 
     setIsModalOpen(true);
+    if (user.name === "guest") {
+      message.warning("This action is not permitted for the guest user.");
+    }
   };
 
-  // Handle Input Change
   const handleChange = (e) => {
+    if (user.name === "guest") return; 
     const { name, value } = e.target;
     setEditedUser({ ...editedUser, [name]: value });
     if (name === "password" && value.length > 0 && value.length < 6) {
@@ -42,19 +43,18 @@ const Profile = () => {
     }
   };
 
-  // Save Updated User Data
   const handleSave = async () => {
+    if (user.name === "guest") return; 
     if (passwordError) {
       message.error("Please enter a valid password.");
       return;
     }
     try {
-      // Update Backend
       const response = await fetch(`https://prep-backend.onrender.com/api/users/${user.id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${localStorage.getItem("token")}`, // Include the token
+          "Authorization": `Bearer ${localStorage.getItem("token")}`, 
         },
         body: JSON.stringify(editedUser),
       });      
@@ -71,7 +71,6 @@ const Profile = () => {
     }
   };
 
-  // Handle Delete Account
   const handleDeleteAccount = async () => {
     confirm({
       title: "Are you sure?",
@@ -82,7 +81,7 @@ const Profile = () => {
       okText: "Yes, Delete",
       okType: "danger",
       cancelText: "Cancel",
-      okButtonProps: { disabled: user.name === "guest" }, // Disable for guest user
+      okButtonProps: { disabled: user.name === "guest" },
       async onOk() {
         if (user.name !== "guest") {
           try {
@@ -90,12 +89,12 @@ const Profile = () => {
               method: "DELETE",
               headers: {
                 "Content-Type": "application/json",
-                "Authorization": `Bearer ${localStorage.getItem("token")}`, // Include the token
+                "Authorization": `Bearer ${localStorage.getItem("token")}`,
               }
             });
             localStorage.removeItem("user");
             message.success("Account deleted successfully!");
-            navigate("/"); // Redirect to login page
+            navigate("/");
           } catch {
             message.error("Error deleting account!");
           }
@@ -104,7 +103,6 @@ const Profile = () => {
     });
   };
 
-  // Dropdown Menu
   const menu = (
     <Menu>
       <Menu.Item key="edit" onClick={handleEditClick}>Edit Details</Menu.Item>
@@ -115,15 +113,12 @@ const Profile = () => {
   return (
     <div className="profile-container">
       <Card className="profile-card">
-        {/* Settings Icon with Dropdown */}
         <Dropdown overlay={menu} trigger={["hover"]} placement="bottomRight">
           <SettingOutlined className="settings-icon" />
         </Dropdown>
 
-        {/* User Avatar */}
         <Avatar size={80} icon={<UserOutlined />} className="profile-avatar" />
 
-        {/* User Details */}
         <Title level={3} className="profile-name">{user.name}</Title>
 
         <Row gutter={[16, 16]} className="profile-details">
@@ -150,7 +145,6 @@ const Profile = () => {
         </Row>
       </Card>
 
-      {/* Edit Profile Modal */}
       <Modal
         title="Edit Profile"
         open={isModalOpen}
@@ -164,6 +158,7 @@ const Profile = () => {
           value={editedUser.name}
           onChange={handleChange}
           className="modal-input"
+          disabled={user.name === "guest"}
         />
         <Input
           name="email"
@@ -172,6 +167,7 @@ const Profile = () => {
           onChange={handleChange}
           className="modal-input"
           style={{ marginTop: "10px" }}
+          disabled={user.name === "guest"}
         />
         <Input.Password
           name="password"
@@ -180,6 +176,7 @@ const Profile = () => {
           onChange={handleChange}
           className="modal-input"
           style={{ marginTop: "10px" }}
+          disabled={user.name === "guest"}
         />
         {passwordError && <Text type="danger">{passwordError}</Text>}
       </Modal>

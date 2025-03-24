@@ -245,7 +245,7 @@ header .intro-text {
   text-align: center;
 }
 
-header a{
+header button{
   background: linear-gradient(to right, #6372ff 0%, #292727e2 100%) !important;
 }
 /* Features Section */

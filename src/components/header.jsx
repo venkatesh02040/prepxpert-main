@@ -1,6 +1,19 @@
 import React from "react";
-
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 export const Header = (props) => {
+
+   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+  const handleNavigate = () => {
+    setLoading(true);
+
+    setTimeout(() => {
+      setLoading(false);
+      navigate("/start-your-journey");
+    }, 1000);
+  };
+
   return (
     <header id="header">
       <div className="intro">
@@ -13,12 +26,9 @@ export const Header = (props) => {
                   <span></span>
                 </h1>
                 <p>{props.data ? props.data.paragraph : "Loading"}</p>
-                <a
-                  href="#features"
-                  className="btn btn-custom btn-lg page-scroll"
-                >
-                  Learn More
-                </a>{" "}
+                <button onClick={handleNavigate} className="btn btn-custom btn-lg page-scroll">
+                  Start Your Journey
+                </button>
               </div>
             </div>
           </div>
