@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { FaChartBar, FaRedo, FaHome } from "react-icons/fa"; 
+import { FaChartBar, FaRedo, FaHome } from "react-icons/fa";
 import "./FinishScreen.css";
 
 const FinishScreen = ({ dispatch }) => {
@@ -21,14 +21,17 @@ const FinishScreen = ({ dispatch }) => {
         };
 
         try {
+            const storedUser1 = JSON.parse(localStorage.getItem("user"));
             if (!userId) {
                 console.warn("⚠️ User ID not found, cannot reset scores.");
                 return;
             }
-
-            const response = await fetch(`https://prep-backend.onrender.com/api/users/${user._id}`, {
-                method: "PATCH",
-                headers: { "Content-Type": "application/json" },
+            const response = await fetch(`https://prep-backend.onrender.com/api/users/${storedUser1.id}/score`, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${localStorage.getItem("token")}`,
+                },
                 body: JSON.stringify(resetData)
             });
 
@@ -36,8 +39,6 @@ const FinishScreen = ({ dispatch }) => {
 
             const storedUser = JSON.parse(localStorage.getItem("user")) || {};
             localStorage.setItem("user", JSON.stringify({ ...storedUser, ...resetData }));
-
-            console.log("Scores reset successfully!");
 
             dispatch({ type: "restartQuiz" });
 
